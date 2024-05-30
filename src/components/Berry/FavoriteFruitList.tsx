@@ -14,7 +14,7 @@ interface FavoriteFruitsProps {
 const FavoriteFruits: React.FC<FavoriteFruitsProps> = ({ fruits }) => {
   return (
     <div>
-      <h1>Favorite Fruits</h1>
+      <h1>Beline's Favorite Fruits</h1>
       <ul>
         {fruits.map((fruit) => (
           <li key={fruit.id}>

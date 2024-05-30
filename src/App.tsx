@@ -6,8 +6,15 @@ import ItemList from "./components/izzeddin/ItemList.tsx"
 // import FavoriteFruitListfrom from "./components/Berry/FavoriteFruitList.tsx";
 import FavoriteFruitList from "./components/Berry/FavoriteFruitList.tsx";
 // import FavoriteFruits from "./components/Berry/FavoriteFruitList.tsx";
+import FavoritePhones from "./components/Princess/FavoritePhones.tsx";
 function App() {
   const favoriteBooks = ["The Alchemist", "The Little Prince"];
+
+  const books = [
+    { id: 1, title: "Dune" },
+    { id: 2, title: "Angels and Demons" },
+    { id: 3, title: "Davinci" },
+  ]
 
   const favoriteFruits = [
     { id: 1, name: "Apple", color: "Red" },
@@ -21,12 +28,17 @@ function App() {
   return (
     <div>
       <h1>Week 3 Q&A</h1>
+      <div className="my-5">
+        <FavoriteBookList favoriteBooks={favoriteBooks} heading="Pelin's Fav Books" onSelectItem={handleSelectedItem}/>
+      </div>
+      <div className="my-5">
+        <ItemList data={books} />
+      </div>
+      <div className="my-5">
+        <FavoriteFruitList fruits={favoriteFruits}/>
+      </div>
+      <
 
-      <FavoriteBookList favoriteBooks={favoriteBooks} heading="Fav Books" onSelectItem={handleSelectedItem}/>
-
-      <h2>Favorite books</h2>
-      <ItemList items={["Dune", "angels and demons", "Da vinci code"]}/>
-      <FavoriteFruitList fruits={favoriteFruits} />
     </div>
   )
 }
